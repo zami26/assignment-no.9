@@ -1,12 +1,22 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Question from '../Question/Question';
 
 const Quiz = () => {
     const quiz = useLoaderData();
-    console.log(quiz);
+    console.log(quiz.data);
+    const { name, questions } = quiz.data;
     return (
         <div>
-            <h2>This is quiz page.</h2>
+            <div className='mt-5'>
+                <h4>Quiz of {name}</h4>
+                {
+                    questions.map(allQuestion => <Question
+                        key={allQuestion.id}
+                        allQuestion={allQuestion}
+                    ></Question>)
+                }
+            </div>
         </div>
     );
 };

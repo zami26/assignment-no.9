@@ -28,7 +28,7 @@ function App() {
           element: <Quiz></Quiz>
         },
         {
-          path: '/topics',
+          path: '/',
           element: <Topics></Topics>
         },
         {
