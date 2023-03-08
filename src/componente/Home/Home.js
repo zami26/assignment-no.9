@@ -5,9 +5,6 @@ import './Home.css'
 
 const Home = () => {
     const quizzes = useLoaderData();
-    // const showQuestion = () => {
-    //     console.log()
-    // }
 
     return (
         <div>
