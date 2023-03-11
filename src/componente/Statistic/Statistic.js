@@ -4,19 +4,22 @@ import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'rec
 
 const Statistic = () => {
     const quizData = useLoaderData();
-    // console.log(quizData.data[0]);
-    // console.log(quizData.data[0].name);
+    const data = [];
+
     return (
         <div>
             <h3>This is about Statistic</h3>
             <div>
-                <BarChart width={500} height={400} data={quizData.data} >
+                {
+                    (quizData.data).map(singleData => console.log(singleData))
+                }
+                <BarChart width={500} height={400} data={data} >
                     <CartesianGrid strokeDasharray="" />
-                    <XAxis dataKey={quizData.data.name} />
+                    <XAxis dataKey={data.name} />
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey={quizData.data[0].total} fill="#8884d8" />
+                    <Bar dataKey={data.total} fill="#8884d8" />
                 </BarChart>
             </div>
 
