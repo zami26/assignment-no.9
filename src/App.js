@@ -40,7 +40,9 @@ function App() {
           element: <Blog></Blog>
         }
       ]
-    }]);
+    },
+    { path: '*', element: <div>Nothing found here: ERROR 404</div> }
+  ]);
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
