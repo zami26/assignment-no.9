@@ -2,5 +2,16 @@
     text-decoration: none;
     margin-left: 40px;
     font-size: 19px;
+    font-weight: bold;
     color: white;
+}
+
+.link a:hover {
+    border: 3px solid black;
+    padding: 3px 5px;
+}
+
+.active {
+    border: 3px solid black;
+    padding: 3px 5px;
 }

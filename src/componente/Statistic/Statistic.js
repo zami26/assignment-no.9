@@ -1,4 +1,5 @@
 import React from "react";
+import './statistic.css'
 import {
     BarChart,
     Bar,

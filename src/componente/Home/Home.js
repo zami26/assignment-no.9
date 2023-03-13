@@ -8,7 +8,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className='header d-flex align-items-center'>
+            <div className='header d-sm-flex align-items-center'>
                 <img src="picture/background.jfif" alt="" />
                 <div className='ms-5 background'>
                     <h2>Test Yourself.....!!!</h2>
@@ -17,12 +17,11 @@ const Home = () => {
             </div>
 
             <h2 className='quiz-heading'>We Offering You....!!!!!  </h2>
-            <div className='d-flex justify-content-evenly'>
+            <div className='d-sm-flex justify-content-evenly quiz-topic'>
                 {
                     (quizzes.data).map(quiz => <QuizTopic
                         key={quiz.id}
                         quiz={quiz}
-                    // showQuestion={showQuestion}
                     ></QuizTopic>)
                 }
             </div>
